@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-auto-rows: 1fr 1fr 1fr;
+      row-gap: 10px;
+      column-gap: 10px;
+      padding: 0px;
+      margin: 0px;
+      border: 2px solid black;
+      width: 100vw;
+      height: 100vh;
+      background-color: blanchedalmond;
+    }
+
+    .item1 {
+      background-color: cadetblue;
+      width: 1fr;
+      height: 1fr;
+      border: 1px solid black;
+    }
+
+    .item2 {
+      background-color: brown;
+      width: 1fr;
+      height: 1fr;
+      border: 1px solid black;
+    }
+
+    .item3 {
+      background-color: darkblue;
+      width: 1fr;
+      height: 1fr;
+      border: 1px solid black;
+    }
+
+    .item4 {
+      background-color: crimson;
+      width: 1fr;
+      height: 1fr;
+      border: 1px solid black;
+    }
+
+    .item5 {
+      background-color: darkgreen;
+      width: 1fr;
+      height: 1fr;
+      border: 1px solid black;
+    }
+
+    .item6 {
+      background-color: darkorange;
+      width: 1fr;
+      height: 1fr;
+      border: 1px solid black;
+    }
+
+    .item7 {
+      background-color: darkmagenta;
+      width: 1fr;
+      height: 1fr;
+      border: 1px solid black;
+    }
+
+    .item8 {
+      background-color: darkviolet;
+      width: 1fr;
+      height: 1fr;
+      border: 1px solid black;
+    }
+
+    .item9 {
+      background-color: darkseagreen;
+      width: 1fr;
+      height: 1fr;
+      border: 1px solid black;
+      text-decoration: none;
+    }
+
+    .item {
+      line-height: 15;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<div class="container">
+  <div class="item item1" onclick="addItem(this)"></div>
+  <div class="item item2" onclick="addItem(this)"></div>
+  <div class="item item3" onclick="addItem(this)"></div>
+  <div class="item item4" onclick="addItem(this)"></div>
+  <div class="item item5" onclick="addItem(this)"></div>
+  <div class="item item6" onclick="addItem(this)"></div>
+  <div class="item item7" onclick="addItem(this)"></div>
+  <div class="item item8" onclick="addItem(this)"></div>
+  <div class="item item9" onclick="addItem(this)"></div>
+</div>
+
+
+  <script>
+ const array = ["햄버거", "피자", "탕수육 ", "마라탕", "한식", "파스타", "돈까스", "중식", "마라샹궈", "샐러드", "금식"];
+    let isClickable = true;
+
+    function addItem(item) {
+      if (isClickable) {
+        const randomNumber = Math.floor(Math.random() * array.length);
+        const randomName = array[randomNumber];
+        item.textContent = randomName;
+        isClickable = false;
+      }
+    }
+
+
+  </script>
+
+</body>
+
+</html>
